@@ -1,27 +1,34 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Pet from "./Pet";
+import { render } from "react-dom";
+import SearchParams from "./SearchParams";
 
- 
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Adopt Me!"), //empty object for passing an id for example
-    React.createElement(Pet, {
-      name: "Luna",
-      animal: "Dog",
-      breed: "Havanese",
-    }),
-    React.createElement(Pet, {
-      name: "Pepper",
-      animal: "Bird",
-      breed: "Cockatiel",
-    }),
-    React.createElement(Pet, {
-      name: "Doint",
-      animal: "Cat",
-      breed: "Mix",
-    }),
-  ]);
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParams />;
+    </div>
+  );
 };
 
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+// const App = () => {
+//   return React.createElement("div", {}, [
+//     React.createElement("h1", {}, "Adopt Me!"), //empty object for passing an id for example
+//     React.createElement(Pet, {
+//       name: "Luna",
+//       animal: "Dog",
+//       breed: "Havanese",
+//     }),
+//     React.createElement(Pet, {
+//       name: "Pepper",
+//       animal: "Bird",
+//       breed: "Cockatiel",
+//     }),
+//     React.createElement(Pet, {
+//       name: "Doint",
+//       animal: "Cat",
+//       breed: "Mix",
+//     }),
+//   ]);
+// };
+
+render(<App />, document.getElementById("root"));
